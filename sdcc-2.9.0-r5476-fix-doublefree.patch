@@ -1,0 +1,21 @@
+--- trunk/sdcc/as/link/lkar.c	2009/07/18 08:25:57	5475
++++ trunk/sdcc/as/link/lkar.c	2009/07/18 09:11:36	5476
+@@ -454,8 +454,6 @@
+         {
+           long moduleOffset = ftell (libfp);
+ 
+-          free (obj_name);
+-
+           /* Opened OK - create a new libraryfile object for it */
+           if (This == NULL)
+             {
+@@ -484,7 +482,7 @@
+ 
+           add_rel_index (libfp, hdr.ar_size, This);
+ 
+-          fseek (libfp, moduleOffset + hdr.ar_size + (hdr.ar_size & 1), SEEK_SET);
++          fseek (libfp, moduleOffset + hdr.ar_size + (hdr.ar_size & 1), SEEK_SET);;
+         }
+     }
+ 
+

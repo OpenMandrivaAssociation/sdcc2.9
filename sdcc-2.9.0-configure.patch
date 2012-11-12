@@ -1,0 +1,67 @@
+diff -urN sdcc.orig/configure.in sdcc/configure.in
+--- sdcc.orig/configure.in	2009-01-19 13:06:40.000000000 -0800
++++ sdcc/configure.in	2009-05-11 14:55:54.000000000 -0700
+@@ -332,12 +332,12 @@
+ # This is the first time when CFLAGS are set/modified!!
+ adl_DD_COPT(CC, ggdb)
+ if test "$sdcc_cv_CCggdb" = "yes"; then
+-  CFLAGS="-ggdb ${CFLAGS}"
++: CFLAGS="-ggdb ${CFLAGS}"
+ fi
+ 
+ adl_DD_COPT(CC, pipe)
+ if test "$sdcc_cv_CCpipe" = "yes"; then
+-  CFLAGS="-pipe $CFLAGS"
++: CFLAGS="-pipe $CFLAGS"
+ fi
+ 
+ 
+diff -urN sdcc.orig/debugger/mcs51/configure.in sdcc/debugger/mcs51/configure.in
+--- sdcc.orig/debugger/mcs51/configure.in	2007-01-03 13:19:58.000000000 -0800
++++ sdcc/debugger/mcs51/configure.in	2009-05-11 15:00:54.000000000 -0700
+@@ -151,12 +151,12 @@
+ # This is the first time when CFLAGS are set/modified!!
+ adl_DD_COPT(CC, ggdb)
+ if test "$sdcc_cv_CCggdb" = "yes"; then
+-  CFLAGS="-ggdb ${CFLAGS}"
++: CFLAGS="-ggdb ${CFLAGS}"
+ fi
+ 
+ adl_DD_COPT(CC, pipe)
+ if test "$sdcc_cv_CCpipe" = "yes"; then
+-  CFLAGS="-pipe $CFLAGS"
++: CFLAGS="-pipe $CFLAGS"
+ fi
+ 
+ 
+diff -urN sdcc.orig/sim/ucsim/configure.in sdcc/sim/ucsim/configure.in
+--- sdcc.orig/sim/ucsim/configure.in	2007-06-28 02:06:31.000000000 -0700
++++ sdcc/sim/ucsim/configure.in	2009-05-11 14:57:45.000000000 -0700
+@@ -519,21 +519,21 @@
+ DD_COPT(CXX, ggdb)
+ DD_COPT(CXX, gstabs)
+ if test "$ucsim_cv_CXXgstabs" = "yes"; then
+-   gopt="-gstabs+ -g3"
++:  gopt="-gstabs+ -g3"
+ elif test "$ucsim_cv_CXXggdb" = "yes"; then
+-     gopt="-ggdb -g3"
++:    gopt="-ggdb -g3"
+ else
+-     gopt="-g"
++:    gopt="-g"
+ fi
+ if test "$CXXFLAGS"x = x ;then
+-        CXXFLAGS="$gopt"
++:       CXXFLAGS="$gopt"
+ else
+-        CXXFLAGS="$CXXFLAGS $gopt"
++:       CXXFLAGS="$CXXFLAGS $gopt"
+ fi
+ 
+ DD_COPT(CXX, pipe)
+ if test "$ucsim_cv_CXXpipe" = "yes"; then
+-  CXXFLAGS="$CXXFLAGS -pipe"
++: CXXFLAGS="$CXXFLAGS -pipe"
+ fi
+ 
+ PICOPT=""
