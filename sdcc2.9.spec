@@ -12,7 +12,7 @@ Release:	%mkrel %{rel}
 Summary:	SDCC - Small Device C Compiler
 Group:		Development/Other
 License:	GPLv2
-URL:		http://sdcc.sourceforge.net/
+URL:		https://sdcc.sourceforge.net/
 Source:		http://sdcc.sourceforge.net/snapshots/sdcc.src/%{oname}-src-%{version}.tar.bz2
 Patch0:		sdcc-2.9.0-configure.patch
 Patch1:		sdcc-2.9.0-patch-out-getline.patch
