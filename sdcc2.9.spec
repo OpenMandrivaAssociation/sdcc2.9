@@ -18,6 +18,10 @@ Patch0:		sdcc-2.9.0-configure.patch
 Patch1:		sdcc-2.9.0-patch-out-getline.patch
 Patch2:		sdcc-2.9.0-r5476-fix-doublefree.patch
 Patch3:		sdcc-2.9.0-r5508-fix-bug2805333.patch
+BuildRequires:	autoconf
+BuildRequires:	automake
+BuildRequires:	libtool-base
+BuildRequires:	slibtool
 BuildRequires:	binutils
 BuildRequires:	bison
 BuildRequires:	flex
