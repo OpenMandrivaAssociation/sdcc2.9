@@ -8,7 +8,7 @@
 
 Name:		%{name}
 Version:	%{version}
-Release:	%mkrel %{rel}
+Release:	%{rel}.1
 Summary:	SDCC - Small Device C Compiler
 Group:		Development/Other
 License:	GPLv2
